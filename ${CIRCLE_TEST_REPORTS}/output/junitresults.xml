@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="ContactUs Cenarios" timestamp="2017-12-17T21:50:48" hostname="localhost" time="6.786" errors="0" tests="1" skipped="0" failures="0">
+  <testcase classname="ContactUs Cenarios" name="Deve mostrar mensagem de validação se não informar o email" time="6.786">
+  </testcase>
+ </testsuite>
+</testsuites>
