@@ -1,7 +1,7 @@
 'use strict';
 
 var ContactUsPage = function() {
-    var subjectSelect = $('#id_contact');
+    var subjectSelect =  $('#id_contact');
     var emailInput = $('#email');
     var orderInput = $('#id_order');
     var messageInput = $('#message');
@@ -10,6 +10,18 @@ var ContactUsPage = function() {
     this.get = function() {
         browser.waitForAngularEnabled(false);
         browser.get('http://automationpractice.com/index.php?controller=contact');
+    }
+
+    this.submitMessage = function () {
+        submitButton.click();
+    }
+
+    this.sendMessage = function(subject, email, order, message) {
+        subjectSelect.sendKeys(subject);
+        emailInput.sendKeys(email);
+        orderInput.sendKeys(order);
+        messageInput.sendKeys(message);
+        submitButton.click();
     }
 
     this.getSubjectSelect = function() {
@@ -32,8 +44,8 @@ var ContactUsPage = function() {
         return $('#center_column > div > ol > li').getText();
     }
 
-    this.submitMessage = function () {
-        submitButton.click();
+    this.successMessage = function() {
+        return $('#center_column > p').getText();
     }
 }
 

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
- <testsuite name="ContactUs Cenarios" timestamp="2017-12-17T21:50:48" hostname="localhost" time="6.786" errors="0" tests="1" skipped="0" failures="0">
-  <testcase classname="ContactUs Cenarios" name="Deve mostrar mensagem de validação se não informar o email" time="6.786">
+ <testsuite name="ContactUs Cenarios" timestamp="2017-12-20T23:44:10" hostname="localhost" time="13.859" errors="0" tests="5" skipped="0" failures="0">
+  <testcase classname="ContactUs Cenarios" name="Deve mostrar mensagem se não informar o email" time="4.795">
+  </testcase>
+  <testcase classname="ContactUs Cenarios" name="Deve mostrar mensagem se email inválido" time="2.019">
+  </testcase>
+  <testcase classname="ContactUs Cenarios" name="Deve mostrar mensagem se mensagem não for informada" time="2.085">
+  </testcase>
+  <testcase classname="ContactUs Cenarios" name="Deve mostrar mensagem se assunto não for informada" time="2.231">
+  </testcase>
+  <testcase classname="ContactUs Cenarios" name="Deve mostrar mensagem de sucesso se todos os campos sao preenchido corretamente" time="2.729">
   </testcase>
  </testsuite>
 </testsuites>
