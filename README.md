@@ -8,9 +8,8 @@ Integrantes do time: Allan, Edson, Priscilla, Lenon
 
 ### 1 - Login
 
-#### 1.1
 ```
-  	Cenário: Deve mostrar mensagem se não informar o email
+    Cenário: Deve mostrar mensagem se não informar o email
       Dado que estou na tela de login
       E que não informei o email
       Quando clico em Login
