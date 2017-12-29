@@ -30,8 +30,15 @@ describe('Authentication Cenarios', function () {
         expect(page.failMessage()).toEqual("Password is required.");
     });
 
-    it('Deve mostrar mensagem credenciais inválidas', function () {
+    it('Deve mostrar mensagem quando email não existir no cadastro do sistema', function () {
         page.typeEmail('teste@teste.com');
+        page.typePassword('velhobarreiro');
+        page.submitLogin();
+        expect(page.failMessage()).toEqual("Authentication failed.");
+    });
+    
+    it('Deve mostrar mensagem quando senha não for a cadastrada para o email informado', function () {
+        page.typeEmail('velhobarreiro@uniritter.edu.br');
         page.typePassword('senhainvalida');
         page.submitLogin();
         expect(page.failMessage()).toEqual("Authentication failed.");
