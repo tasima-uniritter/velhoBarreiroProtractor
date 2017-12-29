@@ -104,3 +104,30 @@ Integrantes do time: Allan, Edson, Priscilla, Lenon
 	Quando clicar em Send
 	Então deve exibir a mensagem "Your message has been successfully sent to our team."
 ```
+
+### Search
+```
+      Cenário: Deve exibir os resultados da pesquisa
+        Dado que estou na tela inicial
+        E que informei um texto que retorne resultados da pesquisa
+        Quando clico em Pesquisar
+        Então o sistema redireciona para a página com os resultados da pesquisa
+        E exibe uma label com o número de registros encontrados no formato "<numero_de_registros> results have been found."
+```
+```
+      Cenário: Não deve exibir resultados da pesquisa quando a pesquisa não retornar resultados
+        Dado que estou na tela inicial
+        E que informei um texto que não retorne resultados da pesquisa
+        Quando clico em Pesquisar
+        Então o sistema redireciona para a página com os resultados da pesquisa
+        E exibe uma label com o texto "0 results have been found."
+```
+```
+      Cenário: Deve exibir mensagem quando a pesquisa for em branco
+        Dado que estou na tela inicial
+        E que não informei um texto no campo de pesquisa
+        Quando clico em Pesquisar
+        Então o sistema redireciona para a página com os resultados da pesquisa
+        E exibe uma label com o texto "0 results have been found."
+        E exibe a mensagem "Please enter a search keyword"
+```
