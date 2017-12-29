@@ -33,6 +33,12 @@ var AuthenticationPage = function() {
     this.limparCacheBrowser = function(){
        browser.restart() 
     }
+
+    this.login = function(email, password){
+        this.typeEmail(email)
+        this.typePassword(password)
+        this.submitLogin()
+    }
 }
 
 module.exports = AuthenticationPage;
