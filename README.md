@@ -54,3 +54,46 @@ Integrantes do time: Allan, Edson, Priscilla, Lenon
         Quando clico em Login
         Então o sistema redireciona para a tela de usuário logado
 ```
+
+### Contact Us
+```
+      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem sem informar o email
+	Dado que estou na tela de Contato
+	Quando clicar em Send
+	Então deve exibir a mensagem "The email must be valid."
+```
+
+```
+      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem informado email inválido
+	Dado que estou na tela de Contato
+	E que informei o email "email invalido"
+	Quando clicar em Send
+	Então deve exibir a mensagem "The email must be valid."
+```
+
+```
+      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem sem informar a mensagem
+	Dado que estou na tela de Contato
+	E que informei um email válido
+	E que não informei uma mensagem
+	Quando clicar em Send
+	Então deve exibir a mensagem "The message cannot be blank."
+```
+```
+      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem (contact us) sem informar o assunto
+	Dado que estou na tela de Contato
+	E que informei um email válido
+	E que informei uma mensagem
+	E que não informei o assunto
+	Quando clicar em Send
+	Então deve exibir a mensagem "Please select a subject from the list provided."
+```
+```
+      Cenário: Deve exibir mensagem de sucesso ao preencher campos obrigatórios do formulário (contact us)
+	Dado que estou na tela de Contato
+	E que informei um email válido
+	E que informei uma mensagem
+	E que informei o assunto
+	Quando clicar em Send
+	Então deve exibir a mensagem "Your message has been successfully sent to our team."
+```
