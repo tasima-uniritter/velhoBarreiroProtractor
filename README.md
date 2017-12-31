@@ -6,7 +6,6 @@
 * Integração com CircleCI.
 
 Centro Universitário Ritter dos Reis
-
 TECNOLOGIAS APLICADAS A SISTEMAS DE INFORMAÇÃO COM MÉTODOS ÁGEIS
 Disciplina: Qualidade de Software
 
