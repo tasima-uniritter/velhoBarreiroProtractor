@@ -17,95 +17,93 @@ Integrantes do time: Allan M. Leite, Edson A. Filho, Priscilla de Oliveira, Leno
 
 ## Cenários
 
-### Login (/specs/authentication-spec.js)
+### Sig in (/specs/authentication-spec.js)
 
 ```
-      Cenário: Deve mostrar mensagem se não informar o email
+      Cenário 1 de 6: Deve mostrar mensagem se não informar o email
         Dado que estou na tela de login
         E que não informei o email
-        Quando clico em Login
+        Quando clico em Sign in
         Então o sistema exibe a mensagem "An email address required."
 ```
 ```
-      Cenário: Deve mostrar mensagem se email inválido
+      Cenário 2 de 6: Deve mostrar mensagem se email inválido
         Dado que estou na tela de login
         E que informei um email inválido
-        Quando clico em Login
+        Quando clico em Sign in
         Então o sistema exibe a mensagem "Invalid email address."
 ```
 ```
-      Cenário: Deve mostrar mensagem se não informar a senha
+      Cenário 3 de 6: Deve mostrar mensagem se não informar a senha
         Dado que estou na tela de login
         E que informei um email válido
         E que não informei a senha
-        Quando clico em Login
+        Quando clico em Sign in
         Então o sistema exibe a mensagem "Password is required."
 ```
 ```
-      Cenário: Deve mostrar mensagem quando email não existir no cadastro do sistema
+      Cenário 4 de 6: Deve mostrar mensagem quando email não existir no cadastro do sistema
         Dado que estou na tela de login
         E que informei um email válido mas que não existe no cadastro do sistema
         E que informei a senha
-        Quando clico em Login
+        Quando clico em Sign in
         Então o sistema exibe a mensagem "Authentication failed."
 ```
 ```
-      Cenário: Deve mostrar mensagem quando senha não for a cadastrada para o email informado
+      Cenário 5 de 6: Deve mostrar mensagem quando senha não for a cadastrada para o email informado
         Dado que estou na tela de login
         E que informei um email válido que existe no cadastro do sistema
         E que informei uma senha que não é a cadastrada para o email informado
-        Quando clico em Login
+        Quando clico em Sign in
         Então o sistema exibe a mensagem "Authentication failed."
 ```
 ```
-      Cenário: Deve redirecionar para a página do usuário quando o login for válido
+      Cenário 6 de 6: Deve redirecionar para a página do usuário quando o login for válido
         Dado que estou na tela de login
         E que informei um email válido 
         E que informei a senha válida
-        Quando clico em Login
+        Quando clico em Sign in
         Então o sistema redireciona para a tela de usuário logado
 ```
 
 ### Contact Us (/specs/contactUs-spec.js)
 
 ```
-      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem sem informar o email
+      Cenário 1 de 5: Deve mostrar mensagem se não informar o email
 	Dado que estou na tela de Contato
-	Quando clicar em Send
-	Então deve exibir a mensagem "The email must be valid."
+	Quando clico em Send
+	Então o sistema exibe a mensagem "Invalid email address."
 ```
-
 ```
-      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem informado email inválido
+      Cenário 2 de 5: Deve mostrar mensagem se email inválido
 	Dado que estou na tela de Contato
 	E que informei o email "email invalido"
-	Quando clicar em Send
-	Então deve exibir a mensagem "The email must be valid."
+	Quando clico em Send
+	Então o sistema exibe a mensagem "Invalid email address."
 ```
-
 ```
-      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem sem informar a mensagem
+      Cenário 3 de 5: Deve mostrar mensagem se mensagem não for informada
 	Dado que estou na tela de Contato
 	E que informei um email válido
 	E que não informei uma mensagem
-	Quando clicar em Send
-	Então deve exibir a mensagem "The message cannot be blank."
+	Quando clico em Send
+	Então o sistema exibe a mensagem "The message cannot be blank."
 ```
 ```
-      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem sem informar o assunto
+      Cenário 4 de 5: Deve mostrar mensagem se assunto não for informado
 	Dado que estou na tela de Contato
 	E que informei um email válido
 	E que informei uma mensagem
 	E que não informei o assunto
-	Quando clicar em Send
-	Então deve exibir a mensagem "Please select a subject from the list provided."
+	Quando clico em Send
+	Então o sistema exibe a mensagem "Please select a subject from the list provided."
 ```
 ```
-      Cenário: Deve exibir mensagem de sucesso ao preencher campos obrigatórios do formulário
+      Cenário 5 de 5: Deve mostrar mensagem de sucesso se todos os campos sao preenchido corretamente
 	Dado que estou na tela de Contato
 	E que informei um email válido
 	E que informei uma mensagem
 	E que informei o assunto
-	Quando clicar em Send
-	Então deve exibir a mensagem "Your message has been successfully sent to our team."
+	Quando clico em Send
+	Então o sistema exibe a mensagem "Your message has been successfully sent to our team."
 ```
