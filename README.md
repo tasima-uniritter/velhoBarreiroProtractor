@@ -9,4 +9,8 @@ Centro Universitário Ritter dos Reis
 TECNOLOGIAS APLICADAS A SISTEMAS DE INFORMAÇÃO COM MÉTODOS ÁGEIS
 Disciplina: Qualidade de Software
 
-Integrantes do time: Allan M. Leite, Edson Filho, Priscilla de Oliveira, Lenon
+Integrantes do time: Allan M. Leite, Edson A. Filho, Priscilla de Oliveira, Lenon Belem
+
+## Cenários
+
+### Login
