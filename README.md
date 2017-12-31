@@ -13,4 +13,4 @@ Integrantes do time: Allan M. Leite, Edson A. Filho, Priscilla de Oliveira, Leno
 
 ## Cenários
 
-### Login
+### Login (/specs/authentication-spec.js)
