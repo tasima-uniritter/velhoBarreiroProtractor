@@ -5,11 +5,15 @@
 * Projeto de testes automatizados funcionais utilizando a ferramenta Protractor.
 * Integração com CircleCI.
 
+
 Centro Universitário Ritter dos Reis
+
 PÓS-GRADUAÇÃO EM TECNOLOGIAS APLICADAS A SISTEMAS DE INFORMAÇÃO COM MÉTODOS ÁGEIS
+
 Disciplina de Qualidade de Software - Maurício Andreazza
 
 Integrantes do time: Allan M. Leite, Edson A. Filho, Priscilla de Oliveira, Lenon Belem
+
 
 ## Cenários
 
@@ -60,4 +64,48 @@ Integrantes do time: Allan M. Leite, Edson A. Filho, Priscilla de Oliveira, Leno
         E que informei a senha válida
         Quando clico em Login
         Então o sistema redireciona para a tela de usuário logado
+```
+
+### Contact Us (/specs/contactUs-spec.js)
+
+```
+      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem sem informar o email
+	Dado que estou na tela de Contato
+	Quando clicar em Send
+	Então deve exibir a mensagem "The email must be valid."
+```
+
+```
+      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem informado email inválido
+	Dado que estou na tela de Contato
+	E que informei o email "email invalido"
+	Quando clicar em Send
+	Então deve exibir a mensagem "The email must be valid."
+```
+
+```
+      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem sem informar a mensagem
+	Dado que estou na tela de Contato
+	E que informei um email válido
+	E que não informei uma mensagem
+	Quando clicar em Send
+	Então deve exibir a mensagem "The message cannot be blank."
+```
+```
+      Cenário: Deve exibir mensagem de erro ao tentar enviar mensagem sem informar o assunto
+	Dado que estou na tela de Contato
+	E que informei um email válido
+	E que informei uma mensagem
+	E que não informei o assunto
+	Quando clicar em Send
+	Então deve exibir a mensagem "Please select a subject from the list provided."
+```
+```
+      Cenário: Deve exibir mensagem de sucesso ao preencher campos obrigatórios do formulário
+	Dado que estou na tela de Contato
+	E que informei um email válido
+	E que informei uma mensagem
+	E que informei o assunto
+	Quando clicar em Send
+	Então deve exibir a mensagem "Your message has been successfully sent to our team."
 ```
